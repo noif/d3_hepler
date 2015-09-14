@@ -1,0 +1,46 @@
+PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - Masonry (0.6.2)
+  - MBProgressHUD (0.9.1)
+  - pop (1.0.7)
+  - RDVTabBarController (1.1.9)
+  - TPKeyboardAvoiding (1.2.9)
+
+DEPENDENCIES:
+  - BlocksKit
+  - FMDB
+  - Masonry
+  - MBProgressHUD (~> 0.9.1)
+  - pop (~> 1.0)
+  - RDVTabBarController
+  - TPKeyboardAvoiding
+
+SPEC CHECKSUMS:
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  TPKeyboardAvoiding: ff1ee4e5a5a0c119b965552af8f183868ea20207
+
+COCOAPODS: 0.38.2
