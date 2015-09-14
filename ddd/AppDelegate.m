@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "DDDTabBarController.h"
+#import "UIImage+Common.h"
+#import "UIColor+Common.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +20,44 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self setupTabViewController];
+    
+    [self customizeIPhoneTheme];
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
+
+#pragma mark - 设置tabVC
+- (void)setupTabViewController {
+    DDDTabBarController *root_vc = [[DDDTabBarController alloc] init];
+    [self.window setRootViewController:root_vc];
+}
+
+#pragma mark - 自定义主题颜色
+- (void)customizeIPhoneTheme {
+    UINavigationBar *navigationBarAppearance = [UINavigationBar appearance];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    NSDictionary *textAttributes = @{
+                                     NSFontAttributeName: [UIFont boldSystemFontOfSize:18],
+                                     NSForegroundColorAttributeName: [UIColor whiteColor],
+                                     };
+    [navigationBarAppearance setTitleTextAttributes: textAttributes];
+    //[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0]];
+    
+    [navigationBarAppearance setTintColor:[UIColor whiteColor]];
+    
+    [navigationBarAppearance setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"28303b"]] forBarMetrics:UIBarMetricsDefault];
+    
+    //[[UIBarButtonItem appearance] setTitlePositionAdjustment:UIOffsetMake(15, 0) forBarMetrics:UIBarMetricsDefault];
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
